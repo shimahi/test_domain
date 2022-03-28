@@ -1,0 +1,19 @@
+import { NextPage, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import { IndexTemplate as Template } from './template'
+import { useViewModel } from './viewModel'
+
+export type PropsType = InferGetStaticPropsType<typeof getStaticProps>
+
+const Page: NextPage<PropsType> = (props) => {
+  const { state, actions } = useViewModel(props)
+
+  return <Template state={state} actions={actions} />
+}
+
+export const getStaticProps = async (context: GetStaticPropsContext) => {
+  return {
+    props: {},
+  }
+}
+
+export default Page

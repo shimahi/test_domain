@@ -1,0 +1,10 @@
+import { makeViewModel } from 'core/architecture'
+import { PropsType } from './index.page'
+import type { State, Action } from './template'
+
+export const useViewModel = makeViewModel<PropsType, State, Action>((props) => {
+  return {
+    state: {},
+    actions: {},
+  }
+})

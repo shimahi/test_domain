@@ -1,0 +1,19 @@
+import { NextPage, GetServerSidePropsContext, InferGetServerSidePropsType } from 'next'
+import { IndexTemplate as Template } from './template'
+import { useViewModel } from './viewModel'
+
+export type PropsType = InferGetServerSidePropsType<typeof getServerSideProps>
+
+const Page: NextPage<PropsType> = (props) => {
+  const { state, actions } = useViewModel(props)
+
+  return <Template state={state} actions={actions} />
+}
+
+export const getServerSideProps = async (context: GetServerSidePropsContext) => {
+  return {
+    props: {},
+  }
+}
+
+export default Page

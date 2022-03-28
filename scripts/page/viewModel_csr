@@ -1,0 +1,9 @@
+import { makeViewModel } from 'core/architecture'
+import type { State, Action } from './template'
+
+export const useViewModel = makeViewModel<{}, State, Action>(() => {
+  return {
+    state: {},
+    actions: {},
+  }
+})

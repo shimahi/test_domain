@@ -1,0 +1,11 @@
+node_modules
+dist/*
+yarn-error.log
+.DS_Store
+.vscode
+.env.local
+.env
+src/@types/graphql.ts
+.next
+tsconfig.tsbuildinfo
+out

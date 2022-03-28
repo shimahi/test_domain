@@ -1,0 +1,23 @@
+import { Template } from 'core/architecture'
+import { Layout } from 'components/layouts'
+import { Container, Box, Text } from '@chakra-ui/react'
+
+export type State = {}
+export type Action = {}
+
+export const IndexTemplate: Template<State, Action> = ({ state: {}, actions: {} }) => {
+  return (
+    <Layout>
+      <Container maxW="container.xl">
+        <Box
+          py={{
+            sm: 12,
+            md: 16,
+          }}
+        >
+          <Text textStyle="h1">Index Page</Text>
+        </Box>
+      </Container>
+    </Layout>
+  )
+}

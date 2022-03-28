@@ -1,0 +1,11 @@
+import { NextPage } from 'next'
+import { IndexTemplate as Template } from './template'
+import { useViewModel } from './viewModel'
+
+const Page: NextPage = () => {
+  const { state, actions } = useViewModel()
+
+  return <Template state={state} actions={actions} />
+}
+
+export default Page
